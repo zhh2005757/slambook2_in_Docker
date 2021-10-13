@@ -1,8 +1,8 @@
 # Slambook2 in Docker
 It's a Docker image for slambook2 codes from Dr.Gao Xiang, also can be built on a host machine!
 In order to avoid the version problem from different libraries (e.g. Sophus, ceres, opencv etc) depended by slambook2 codes on different operating systems, the Docker image can form a virtual environment to run the codes. You can test the slambook2 codes in Docker, also build it on you own system (although only tested successfully on Ubuntu 16.04, it should work on other linux OSs).
-# Build and Usage
-## With Docker
+## Build and Usage
+### With Docker
 build the Docker image in the repo root, like
 ```
 docker build -t <your_image_name>:<tag> .
@@ -22,7 +22,7 @@ cmake ..
 make
 ```
 This will generate all executable files in slambook2, you can check and test them according to the book.
-## Without Docker
+### Without Docker
 If you would like to build it on your own Ubuntu, the first is to make sure that your gcc/g++ version >=5.4.0 and cmake version >=3.17.5.Also, the idendity is recommended.Otherwise, you can check the Dockerfile and install.sh for more details about the installation of gcc/g++ and cmake. Also it needs to install some pre-libraries with
 ```
 apt-get install -y libssl-dev libsuitesparse-dev qtdeclarative5-dev libqglviewer-dev  qt5-qmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev g++ libzip-dev libpng12-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew*-dev libssl-dev libpcl-dev freeglut3 freeglut3-dev python-dev python3-dev libgtk2.0-dev pkg-config pcl-tools octovis
